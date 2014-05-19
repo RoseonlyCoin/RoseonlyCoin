@@ -1,0 +1,34 @@
+src/*.exe
+src/RoseonlyCoin
+src/RoseonlyCoind
+src/test_RoseonlyCoin
+.*.swp
+*.*~*
+*.bak
+*.rej
+*.orig
+*.o
+*.patch
+.RoseonlyCoin
+
+# Compilation and Qt preprocessor part
+*.qm
+Makefile
+RoseonlyCoin-qt
+RoseonlyCoin-Qt.app
+
+# Unit-tests
+Makefile.test
+RoseonlyCoin-qt_test
+
+# Resources cpp
+qrc_*.cpp
+
+# Qt creator
+*.pro.user
+
+# Mac specific
+.DS_Store
+build
+
+!src/leveldb*/Makefile
