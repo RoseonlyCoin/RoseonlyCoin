@@ -35,6 +35,8 @@ LIBPATHS= \
  -L"$(CURDIR)/leveldb" \
  -L"/d/boost-1.50.0-mgw/stage/lib/" \
  -L"/d/db-4.8.30.NC-mgw-1/lib/" \
+ -L"/usr/local/ssl/lib" \
+ -L"/usr/local/lib"
 
 LIBS= \
  -l leveldb \
@@ -48,7 +50,7 @@ LIBS= \
  -l ssl \
  -l crypto
 
-DEFS=-DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -DBOOST_SPIRIT_THREADSAFE
+DEFS=-DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -DBOOST_SPIRIT_THREADSAFE -D__NO_SYSTEM_INCLUDES
 DEBUGFLAGS=-g
 CFLAGS=-mthreads -O2 -w -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter $(DEBUGFLAGS) $(DEFS) $(INCLUDEPATHS)
 # enable: ASLR, DEP and large address aware
